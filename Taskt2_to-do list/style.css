@@ -1,0 +1,132 @@
+body {
+    background-color: #1c1c1c;
+}
+
+#container {
+    margin: 20px auto;
+    text-align: center;
+    color: #fff;
+}
+
+#task-box {
+    outline: none;
+    color: #111010;
+    text-align: left;
+    font-size: 1.6rem;
+    width: 480px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background-color: rgba(232, 230, 230, 0.94);
+    border: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+#task-box::placeholder {
+    text-align: left;
+    color: #1f1a1a;
+}
+
+#submit-btn {
+    margin: 20px auto;
+    font-weight: bold;
+    font-size: 1.6rem;
+    background: rgb(241, 241, 245);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 2px solid #efaaaa;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: "Arial", sans-serif;
+}
+
+#logs {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#logs h2 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+#task {
+    margin: 30px auto;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: max-content;
+    background-color: #1c1e1d;
+    transition: transform 0.4s;
+    padding: 12px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#task:hover {
+    transform: scale(1.05);
+}
+
+#task>* {
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+#edit,
+#delete,
+#done,
+#undone {
+    color: #656fc2;
+    font-size: 1.4rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#edit:active,
+#delete:active,
+#done:active {
+    color: #d2cfee;
+    transition: all 0.2s;
+}
+
+#main-task {
+    outline: none;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    font-size: 1.4rem;
+    min-height: 60px;
+    min-width: max-content;
+}
+
+#main-task:not(:read-only) {
+    color: #808080;
+}
+
+.done-text {
+    text-decoration: line-through;
+    animation: done 0.5s forwards;
+}
+
+@keyframes done {
+    to {
+        text-decoration: line-through;
+    }
+}
+
+#report {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ffcc00;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #363636;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: "Arial", sans-serif;
+}
